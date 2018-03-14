@@ -21,6 +21,11 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    vendor: [
+      'axios',
+      'vue-i18n'
+    ],
+
     /*
     ** Run ESLint on save
     */
@@ -34,5 +39,18 @@ module.exports = {
         })
       }
     }
+  },
+
+  plugins: [
+    '~/plugins/axios.js',
+    '~/plugins/i18n.js'
+  ],
+
+  router: {
+    middleware: 'i18n'
+  },
+
+  generate: {
+    routes: ['/', '/about', '/zh', '/zh/about']
   }
 }
