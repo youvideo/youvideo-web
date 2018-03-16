@@ -1,6 +1,6 @@
 <template>
   <q-page class="flex flex-center">
-    <img alt="Quasar logo" src="~assets/quasar-logo-full.svg">
+    <player></player>
   </q-page>
 </template>
 
@@ -8,7 +8,11 @@
 </style>
 
 <script>
+import Player from 'components/player.vue'
+
 export default {
-  name: 'PageIndex'
+  name: 'PageIndex',
+
+  components: {Player}
 }
 </script>
